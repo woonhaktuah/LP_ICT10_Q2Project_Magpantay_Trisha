@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Club Information</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.9.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.9.1/core.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f0f7;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #01061f;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* TITLE */
+        h1 {
+            text-align: center;
+            color: #01061f;
+            margin-top: 40px;
+            font-size: 32px;
+        }
+
+        /* CONTENT AREA */
+        .container {
+            width: 60%;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            color: #01061f;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid white;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #01061f;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #01061f;
+        }
+
+        /* OUTPUT BOX */
+        #output-box {
+            background: white;
+            margin-top: 40px;
+            padding: 20px;
+            border-left: 4px solid #01061f;
+            border-radius: 6px;
+            white-space: pre-line;
+            font-family: "Courier New", monospace;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #01061f;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>BND University</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="grades.html">Grade Calculator</a>
+            <a href="clubs.html">Clubs</a>
+        </nav>
+    </header>
+
+    <h1>School Club Information</h1>
+
+    <div class="container">
+        <label>Select a club:</label>
+        <select id="club-select">
+            <option value="Robotics Club">Robotics Club</option>
+            <option value="Communication Arts Club">Communication Arts Club</option>
+            <option value="MathSci Guild">MathSci Guild</option>
+            <option value="Dance Club">Dance Club</option>
+            <option value="Music Ensemble">Music Ensemble</option>
+            <option value="Culinary Arts Club">Culinary Arts Club</option>
+        </select>
+
+        <button id="show-btn" py-click="show_info">
+            Show Club Information
+        </button>
+
+        <div id="output-box"></div>
+    </div>
+    
+    <script type="py" src="main2.py"></script>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer>
+    © 2025 BND University | Trisha Anika L. Magpantay
+    </footer>
+
+</body>
+</html>
